@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Smooth transitions */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Code blocks */
+pre code {
+  tab-size: 4;
+}
+
+/* Details/summary animation */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(249, 115, 22, 0.3);
+  color: white;
+}
+
+/* Focus styles */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+}
+
+/* Animate pulse for status indicator */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Keyboard shortcut styling */
+kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+}
