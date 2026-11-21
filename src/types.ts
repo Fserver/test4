@@ -19,6 +19,20 @@ export interface GrubConfig {
   GRUB_SAVEDEFAULT: string;
 }
 
+export interface WindowsBootConfig {
+  timeout: string;
+  defaultEntry: string;
+  displayBootMenu: string;
+  advancedOptions: string;
+  emsEnabled: string;
+  bootDebug: string;
+  testSigning: string;
+  nxPolicy: string;
+  paePolicy: string;
+  bootMenuPolicy: string;
+  bootShutDown: string;
+}
+
 export interface BootEntry {
   id: string;
   name: string;
@@ -27,3 +41,4 @@ export interface BootEntry {
 }
 
 export type TabType = 'config' | 'entries' | 'preview' | 'help';
+export type OSType = 'ubuntu' | 'windows';
